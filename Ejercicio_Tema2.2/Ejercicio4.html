@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var motor = prompt(
+        "Introduzca un motor, los valores permitidos son 1, 2, 3 o 4"
+      );
+
+      if (motor == 1) {
+        document.write(`La bomba es de agua`);
+      } else if (motor == 2) {
+        document.write(`La bomba es de gasolina`);
+      } else if (motor == 3) {
+        document.write(`La bomba es de hormigón`);
+      } else if (motor == 4) {
+        document.write(`La bomba es de pasta alimenticia`);
+      } else if (motor == 0) {
+        document.write(`No hay valor definido`);
+      } else {
+        document.write(`Lo sentimos, no tenemos ese motor.`);
+      }
+    </script>
+  </body>
+</html>

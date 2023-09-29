@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const OREO = 1;
+      const KITKAT = 1.5;
+      const BROWNIE = 0.75;
+      const LACASITOS = 0.95;
+      var helado = 1.9;
+      var topping = prompt("Introduzca un topping para compra un helado");
+
+      if (topping == "oreo") {
+        helado += OREO;
+        document.write(`El precio del helado es ${helado}`);
+      } else if (topping == "kitkat") {
+        helado += KITKAT;
+        document.write(`El precio del helado es ${helado}`);
+      } else if (topping == "brownie") {
+        helado += BROWNIE;
+        document.write(`El precio del helado es ${helado}`);
+      } else if (topping == "lacasitos") {
+        helado += LACASITOS;
+        document.write(`El precio del helado es ${helado}`);
+      } else {
+        document.write(
+          `Lo sentimos, no tenemos ese topping. El precio del helado es ${helado}`
+        );
+      }
+    </script>
+  </body>
+</html>
