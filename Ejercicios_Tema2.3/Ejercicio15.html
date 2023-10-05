@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var conf = confirm("¿Aceptas abrir la ventana?");
+      if (conf) {
+        let nuevaVentana = window.open(
+          "",
+          "SegundaPag",
+          "height=80, width=200, top=500, left=500, scrollbars=yes, resizable=yes"
+        );
+        nuevaVentana.document.write("HOLA");
+        nuevaVentana.focus();
+      }
+    </script>
+  </body>
+</html>

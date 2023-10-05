@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let dia = prompt("Introduce el dia de tu cumpleaños");
+      let mes = prompt("Introduce el mes de tu cumpleaños");
+
+      var contador = 0;
+      for (let index = 2023; index <= 2100; index++) {
+        var fecha = new Date(index, mes, dia);
+        if (fecha.getDay() == 0) {
+          document.write(fecha.getFullYear() + "<br>");
+          contador++;
+        }
+      }
+      document.write(contador);
+    </script>
+  </body>
+</html>

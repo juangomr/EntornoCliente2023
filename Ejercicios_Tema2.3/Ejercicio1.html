@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let actual = new Date();
+      let cumpleaños = new Date(1996, 8, 11);
+      document.write("Fecha actual: " + actual.toLocaleDateString());
+      document.write("<br>");
+      document.write(
+        "Fecha de mi cumpleaños: " + cumpleaños.toLocaleDateString()
+      );
+      document.write("<br>");
+      document.write("Año de la fecha actual: " + actual.getFullYear());
+      actual.setFullYear(2022);
+      document.write("<br>");
+      document.write(
+        "Cambio de año de fecha actual: " + actual.toLocaleDateString()
+      );
+      document.write("<br>");
+      document.write(
+        actual.getDate() + "/" + actual.getMonth() + "/" + actual.getFullYear()
+      );
+    </script>
+  </body>
+</html>
