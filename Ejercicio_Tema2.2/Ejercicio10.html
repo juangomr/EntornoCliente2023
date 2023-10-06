@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      var x = 5;
 
-      for (let index = 0; index < 5; index++) {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var x = 1;
+        var y = 5;
+
         for (let index = 5; index >= 1; index--) {
-          document.write(index);
+            for (let i = y; i >= x; i--) {
+                document.write(i);
+                if (i == x) {
+                    document.write("<br>");
+                }
+            }
+            i = --y;
         }
-        document.write("<br>");
-      }
+
     </script>
-  </body>
+</body>
+
 </html>

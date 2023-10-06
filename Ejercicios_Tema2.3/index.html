@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var segunda;
+        function abrirVentana() {
+            segunda = window.open('segunda.html', 'segunda.html', 'height=300, width=400 top=400, left=400');
+        }
+
+        function cerrarVentana() {
+            segunda = segunda.window.close();
+        }
+        function moverVentana() {
+            abrirVentana();
+            segunda = segunda.window.moveBy(200, 100);
+        }
+        function mover2Ventana() {
+            abrirVentana();
+            segunda = segunda.window.moveTo(500, 200);
+        }
+        function AumentarVentana() {
+            abrirVentana();
+            segunda = segunda.window.Resizeby(100, 100);
+        }
+        function CambiarVentana() {
+            abrirVentana();
+            segunda = segunda.ResizeTo(100, 150);
+        }
+    </script>
+    <h1>Página principal</h1>
+    <input type="button" onclick="abrirVentana()" value="Abrir segunda página" />
+    <input type="button" onclick="cerrarVentana()" value="Cerrar segunda página" />
+    <input type="button" onclick="moverVentana()" value="Mover segunda página" />
+    <input type="button" onclick="mover2Ventana()" value="Mover2 segunda página" />
+    <input type="button" onclick="AumentarVentana()" value="Aumentar segunda página" />
+    <input type="button" onclick="CambiarVentana()" value="Cambiar segunda página" />
+
+
+</body>
+
+</html>

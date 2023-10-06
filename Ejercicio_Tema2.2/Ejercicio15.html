@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var base = prompt("Introduce la base del rectangulo");
+        var altura = prompt("Introduce la altura del rectangulo");
+
+        for (let i = 1; i <= altura; i++) {
+
+            for (let j = 1; j <= base; j++) {
+                if (i == 2 && (j != 1 || j != base)) {
+                    document.write(" ");
+                } else {
+                    document.write("*");
+                }
+            }
+            document.write("<br>")
+        }
+    </script>
+</body>
+
+</html>

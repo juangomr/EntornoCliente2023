@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var nombre = prompt("Introduzca el nombre");
+        var apellidos = prompt("Introduzca los apellidos");
+        var edad = prompt("Introduzca la edad");
+        var salario = prompt("Introduzca el salario");
+
+        if (salario >= 2000) {
+            document.write(`Su nombre completo es: ${nombre} ${apellidos}, su edad es: ${Number(edad.toFixed)(0)} y su salario: ${Number(salario).toFixed(2)}€`);
+
+        } else if (salario > 999) {
+            if (edad > 45) {
+                document.write(`Su nombre completo es: ${nombre} ${apellidos}, su edad es: ${Number(edad).toFixed(0)} y su salario: ${Number((salario) * 1.03).toFixed(2)}€`);
+            } else if (edad < 46) {
+                document.write(`Su nombre completo es: ${nombre} ${apellidos}, su edad es: ${Number(edad).toFixed(0)} y su salario: ${Number((salario) * 1.10).toFixed(2)}€`);
+            }
+        } else if (salario > 0) {
+            if (edad < 30) {
+                salario = 1100;
+                document.write(`Su nombre completo es: ${nombre} ${apellidos}, su edad es: ${Number(edad).toFixed(0)} y su salario: ${Number(salario).toFixed(2)}€`);
+            } else if (edad < 46) {
+                document.write(`Su nombre completo es: ${nombre} ${apellidos}, su edad es: ${Number(edad).toFixed(0)} y su salario: ${Number((salario) * 1.03).toFixed(2)}€`);
+            } else {
+
+                document.write(`Su nombre completo es: ${nombre} ${apellidos}, su edad es: ${Number(edad).toFixed(0)} y su salario: ${Number((salario) * 1.15).toFixed(2)}€`);
+
+            }
+        }
+    </script>
+</body>
+
+</html>
