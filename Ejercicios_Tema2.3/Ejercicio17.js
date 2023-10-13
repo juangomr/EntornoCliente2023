@@ -19,3 +19,30 @@ function parar2() {
 }
 
 let temporizador = setInterval(empezar, 2000);
+
+function abrir() {
+  let nuevaVentana = window.open(
+    "",
+    "SegundaPag",
+    "height=300, width=300, top=0, left=0"
+  );
+
+  nuevaVentana.document.write("<p>Reloj</p>");
+  activarTemp();
+  desactivarTemp();
+
+}
+
+function reloj() {
+  actual = new Date();
+  actual = actual.toLocaleTimeString();
+  nuevaVentana.document.write(actual);
+}
+
+function activarTemp() {
+  let temp = setInterval(reloj, 1000);
+}
+
+function desactivarTemp() {
+  let temp = clearInterval(activarTemp, 5000);
+}
