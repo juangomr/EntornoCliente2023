@@ -11,12 +11,13 @@
 
       if (!isNaN(a)) {
         let factorial = (a = 0) => {
-          var contador = 0;
-
-          for (let index = a; index > 0; index--) {
-            contador += (index * (index - 1));
+          let i = 2;
+          var index = 1
+          while (i <= Number(a)) {
+            index *= i;
+            i++;
           }
-          return contador;
+          return index;
         };
         document.write(factorial(a));
       } else {
