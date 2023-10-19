@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let crearTabla = (fila = 10, columna = 4, color = "black") => {
+            document.write("<table border=3 width= 100% bordercolor=" + color +"cellspacing=3>");
+            for (let index = 0; index < fila; index++) {
+                document.write("<tr name=fila>");
+                for (let index = 0; index < columna; index++) {
+                    document.write("<td name=celda>HOLA</td>");
+
+                }
+                document.write("</tr>");
+
+            }
+            document.write("</table>");
+
+        }
+        crearTabla();
+        crearTabla(20, 10, "green");
+    </script>
+</body>
+
+</html>

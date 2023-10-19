@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let tabla = (fila = 10, col = 4, color = "black") => {
+            var tab = document.createElement("table");
+            tab.style.width = "100%";
+            tab.style.border = "3px solid" + color;
+            tab.style.borderCollapse = "collapse";
+
+
+            for (let i = 0; i < fila; index++) {
+                var f = document.createElement("tr");
+
+                for (let j = 0; j < col; index++) {
+                    var c = document.createElement("td");
+                    c.style.border = "1px solid" + color;
+                    f.appendChild(c);
+                }
+                tab.appendChild(f);
+            }
+            document.body.appendChild(tab);
+        };
+
+        tabla();
+    </script>
+</body>
+
+</html>

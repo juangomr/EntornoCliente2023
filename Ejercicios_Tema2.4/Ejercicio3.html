@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      let bucle = (a) => {
-          if (a % 2 == 0) {
-             return a + "es par";
-          } else {
-           
-            return a + "es impar";
-          }
-        };
 
-        for (let i = 0; i <= 500; i++) {
-        
-          document.write(i + " " + bucle(Math.floor(Math.random() * (10000 - 1 + 1)) + 1)+ "<br>");
-          
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
-      
+<body>
+  <script>
+    let bucle = (a) => {
+      if (a % 2 == 0) {
+        return a + "es par";
+      } else {
+        return a + "es impar";
+      }
+    };
 
-      
-    </script>
-  </body>
+    for (let i = 0; i <= 500; i++) {
+      document.write(i + " " + bucle(Math.floor(Math.random() * (10000 - 1 + 1)) + 1) + "<br>");
+    }
+
+  </script>
+</body>
+
 </html>

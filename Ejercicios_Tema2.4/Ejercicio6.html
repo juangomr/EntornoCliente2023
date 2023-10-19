@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const crearTabla = (filas = 10, columnas = 4, colorBorde = 'black') => {
+  // Crear la tabla
+  const tabla = document.createElement('table');
+  tabla.style.borderCollapse = 'collapse';
+  tabla.style.width = '100%';
+
+  // Crear el borde exterior
+  tabla.style.border = `3px solid ${colorBorde}`;
+
+  for (let i = 0; i < filas; i++) {
+    const fila = document.createElement('tr');
+
+    for (let j = 0; j < columnas; j++) {
+      const celda = document.createElement('td');
+      celda.style.border = `1px solid ${colorBorde}`;
+      celda.style.padding = '5px';
+      fila.appendChild(celda);
+    }
+
+    tabla.appendChild(fila);
+  }
+
+  // Agregar la tabla al cuerpo del documento
+  document.body.appendChild(tabla);
+};
+
+// Llamar a la función con los valores por defecto
+crearTabla();
+
+    </script>
+</body>
+</html>
