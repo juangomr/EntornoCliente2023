@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      do {
+        var palabra = prompt("Introduce una palabra");
+      } while (!isNaN(palabra));
+
+      var array = palabra.split("");
+      var contador = 0;
+      array.forEach((e) => {
+        if (e == "a" || e == "e" || e == "i" || e == "o" || e == "u") {
+          contador++;
+        }
+      });
+      document.write(
+        "La palabra " + palabra + " tiene " + contador + " vocales"
+      );
+    </script>
+  </body>
+</html>

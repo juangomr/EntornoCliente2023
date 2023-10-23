@@ -1,40 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
+      const array = new Array();
 
-        const array = new Array();
+      for (let index = 0; index <= 2; index++) {
+        array[index] = prompt("Introduce una palabra");
 
-        for (let index = 0; index <= 2; index++) {
-
-            array[index] = prompt("Introduce una palabra");
-
-            if (array[index] == null) {
-                array[index] = "";
-            }
-
+        if (array[index] == null) {
+          array[index] = "";
         }
-        document.write("Array inicial: " + array + "<br>");
-        document.write("Array filtrado: ");
-        var contador = 0;
-        array.forEach(element => {
-            if (element.startsWith("c")) {
-                document.write(element + " ");
-                contador++;
-            }
-        });
-        if (contador == 0) {
-            document.write("No hay ninguna palabra que empiece por C");
+      }
+      document.write("Array inicial: " + array + "<br>");
+      document.write("Array filtrado: ");
+      var contador = 0;
+      array.forEach((element) => {
+        if (element.startsWith("c")) {
+          document.write(element + " ");
+          contador++;
         }
-
+      });
+      if (contador == 0) {
+        document.write("No hay ninguna palabra que empiece por C");
+      }
     </script>
-</body>
-
+  </body>
 </html>

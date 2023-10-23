@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var filas = 5;
+      var columnas = 15;
+      var arrayBidimensional = new Array(filas);
+
+      let creaMatriz = (arrayBidimensional) => {
+        for (let i = 0; i < filas; i++) {
+          arrayBidimensional[i] = new Array(columnas);
+        }
+
+        for (var i = 0; i < filas; i++) {
+          for (let j = 0; j < columnas; j++) {
+            if (i >= 1 && i < 4 && j > 0 && j < 14) {
+              arrayBidimensional[i][j] = 0;
+            } else {
+              arrayBidimensional[i][j] = 1;
+            }
+          }
+        }
+      };
+
+      let pintaMatriz = (arrayBidimensional) => {
+        for (var i = 0; i < filas; i++) {
+          for (let j = 0; j < columnas; j++) {
+            document.write(arrayBidimensional[i][j] + " ");
+          }
+          document.write("<br>");
+        }
+      };
+
+      creaMatriz(arrayBidimensional);
+      pintaMatriz(arrayBidimensional);
+    </script>
+  </body>
+</html>

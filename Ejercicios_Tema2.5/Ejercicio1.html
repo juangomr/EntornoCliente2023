@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        const arr = [2, 3, 4, 5, 0];
-        const arrayDiferente = arr.map(index => index * 3);
-        let sumaTotal = () => {
-            let suma = 0;
-            arr.forEach((index) => {
-                suma += index;
-            });
-            return suma;
-        }
-        document.write("La suma total del array es: " + sumaTotal() + "<br>");
+      const arr = [2, 3, 4, 5, 0];
+      const arrayDiferente = arr.map((index) => index * 3);
+      let sumaTotal = () => {
+        let suma = 0;
+        arr.forEach((index) => {
+          suma += index;
+        });
+        return suma;
+      };
+      document.write("La suma total del array es: " + sumaTotal() + "<br>");
 
-        let media = () => {
-            return sumaTotal() / arr.length;
-        }
-        document.write("La media del array es: " + media() + "<br>");
+      let media = () => {
+        return sumaTotal() / arr.length;
+      };
+      document.write("La media del array es: " + media() + "<br>");
 
-        document.write("El triple de cada elemento del array es: " + arrayDiferente + "<br>");
+      document.write(
+        "El triple de cada elemento del array es: " + arrayDiferente + "<br>"
+      );
 
-        for (let index = 0; index < arrayDiferente.length; index++) {
-            arrayDiferente[index] = arrayDiferente[index] * 3;
-        }
-        document.write("El triple de cada elemento del array es: " + arrayDiferente);
-
+      for (let index = 0; index < arrayDiferente.length; index++) {
+        arrayDiferente[index] = arrayDiferente[index] * 3;
+      }
+      document.write(
+        "El triple de cada elemento del array es: " + arrayDiferente
+      );
     </script>
-</body>
-
+  </body>
 </html>
