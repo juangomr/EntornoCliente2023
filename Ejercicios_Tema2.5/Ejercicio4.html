@@ -6,9 +6,69 @@
     <title>Document</title>
   </head>
   <body>
+    <form name="formulario">
+      <input
+        type="submit"
+        name="aprobado"
+        id="aprobado"
+        value="Aprobado general"
+      />
+      <input
+        type="submit"
+        name="actualizar"
+        id="actualizar"
+        value="Actualizar nota"
+      />
+      <input
+        type="submit"
+        name="mostrar"
+        id="mostrar"
+        value="Mostrar notas actuales"
+      /><br /><br />
+      <textarea name="area" id="area" cols="50" rows="10"></textarea>
+    </form>
+
     <script>
-      var alumnos = ["Juan", "Ana", "María", "José", "Fran"];
-      document.write(alumnos.join());
+      const botonMostrar = document.getElementById("mostrar");
+      const botonAprobar = document.getElementById("aprobado");
+      const botonActualizar = document.getElementById("actualizar");
+      const textarea = document.getElementById("area");
+      const alumnos = ["Juan", "Ana", "María", "José", "Fran"];
+
+      botonAprobar.addEventListener("click", function () {
+        event.preventDefault();
+        var nota = 5;
+      });
+
+      botonMostrar.addEventListener("click", function () {
+        event.preventDefault();
+        apr();
+        for (let index = 0; index < alumnos.length; index++) {
+          textarea.value +=
+            index + 1 + "- " + alumnos[index] + " - " + nota + "\n";
+        }
+      });
+
+      botonActualizar.addEventListener("click", function (alumnos) {
+        event.preventDefault();
+        var codigo = prompt("Introduce el codigo del alumno");
+        var notaActualizada = prompt("Introduce una nota");
+        for (let index = 0; index < alumnos.length; index++) {
+          if (codigo == index) {
+            textarea.value +=
+              index +
+              1 +
+              "- " +
+              alumnos[index] +
+              " - " +
+              notaActualizada +
+              "\n";
+          } else {
+            textarea.value +=
+              index + 1 + "- " + alumnos[index] + " - " + nota + "\n";
+          }
+        }
+      });
     </script>
   </body>
 </html>
