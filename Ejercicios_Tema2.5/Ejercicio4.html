@@ -34,38 +34,30 @@
       const botonActualizar = document.getElementById("actualizar");
       const textarea = document.getElementById("area");
       const alumnos = ["Juan", "Ana", "María", "José", "Fran"];
+      var nota;
+      var codigo;
+      var notaActualizada;
 
       botonAprobar.addEventListener("click", function () {
         event.preventDefault();
-        var nota = 5;
+        nota = 5;
+      });
+
+      botonActualizar.addEventListener("click", function () {
+        event.preventDefault();
+        codigo = prompt("Introduce el codigo del alumno");
+        notaActualizada = prompt("Introduce la nota actualizada del alumno");
       });
 
       botonMostrar.addEventListener("click", function () {
         event.preventDefault();
-        apr();
-        for (let index = 0; index < alumnos.length; index++) {
-          textarea.value +=
-            index + 1 + "- " + alumnos[index] + " - " + nota + "\n";
-        }
-      });
-
-      botonActualizar.addEventListener("click", function (alumnos) {
-        event.preventDefault();
-        var codigo = prompt("Introduce el codigo del alumno");
-        var notaActualizada = prompt("Introduce una nota");
         for (let index = 0; index < alumnos.length; index++) {
           if (codigo == index) {
             textarea.value +=
-              index +
-              1 +
-              "- " +
-              alumnos[index] +
-              " - " +
-              notaActualizada +
-              "\n";
+              index + "- " + alumnos[index] + " - " + notaActualizada + "\n";
           } else {
             textarea.value +=
-              index + 1 + "- " + alumnos[index] + " - " + nota + "\n";
+              index + "- " + alumnos[index] + " - " + nota + "\n";
           }
         }
       });

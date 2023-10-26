@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let menu = {
+        width: 200,
+        height: 300,
+        title: "Mi menú",
+      };
+      let multiplyNumeric = (objecto) => {
+        for (let key in objecto) {
+          if (!isNaN(objecto[key])) {
+            objecto[key] = objecto[key] * 2;
+          }
+        }
+      };
+      document.write("Menú antes de la llamada" + "<br>");
+      for (const key in menu) {
+        document.write(key + ": " + menu[key] + "<br>");
+      }
+      multiplyNumeric(menu);
+      document.write("Menú después de la llamada" + "<br>");
+      for (const key in menu) {
+        document.write(key + ": " + menu[key] + "<br>");
+      }
+    </script>
+  </body>
+</html>

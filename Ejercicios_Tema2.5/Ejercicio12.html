@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let salarios = {
+        John: 100,
+        Ann: 160,
+        Peter: 130,
+      };
+
+      let contador = 0;
+      for (const valor in salarios) {
+        contador += salarios[valor];
+      }
+      document.write("El objeto salario contiene las propiedades: " + "<br>");
+      for (const valor in salarios) {
+        document.write(valor + ": " + salarios[valor] + "<br>");
+      }
+      document.write("El total de los salarios es: " + contador + "€");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const numeros = [1, 3, 2, 5, 7, 4];
+      arr = ["hola"];
+
+      let filtrado = (array = undefined) => {
+        if (array === undefined) {
+          document.write("El array está indefinido" + "<br>");
+          return;
+        } else if (!Array.isArray(array)) {
+          document.write("No se ha introducido un array" + "<br>");
+          return;
+        } else if (array.length === 0) {
+          document.write("El array está vacío" + "<br>");
+          return;
+        }
+        for (let num of array) {
+          if (typeof num !== "number") {
+            document.write("El valor " + num + " no es un número" + "<br>");
+            return;
+          }
+        }
+        pares = array.filter((array) => array % 2 === 0);
+        impares = array.filter((array) => array % 2 !== 0);
+        document.write("Pares: " + pares + "<br>" + "Impares: " + impares);
+      };
+      filtrado();
+      filtrado([]);
+      filtrado(arr);
+      filtrado(numeros);
+    </script>
+  </body>
+</html>

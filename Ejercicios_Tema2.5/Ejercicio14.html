@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let cliente = {
+        nombre: "Juan",
+        email: "juangomr@gmail.com",
+        dirección: {
+          calle: "clavel",
+          num: 21,
+          ciudad: "sevilla",
+        },
+      };
+
+      document.write(cliente.direccion.ciudad);
+      cliente.direccion.ciudad = "huelva";
+      document.write(cliente.direccion.ciudad);
+    </script>
+  </body>
+</html>

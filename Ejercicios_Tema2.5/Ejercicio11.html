@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let punto = {};
+      let linea = {
+        nombre: "flecha",
+      };
+      let vacio = (objeto) => {
+        for (const propiedad in objeto) {
+          if (objeto.hasOwnProperty(propiedad)) {
+            return false;
+          }
+        }
+        return true;
+      };
+      if (vacio(punto)) {
+        document.write("El objeto está vacío" + "<br>");
+      } else {
+        document.write("El objeto tiene alguna propiedad");
+      }
+      if (vacio(linea)) {
+        document.write("El objeto está vacío");
+      } else {
+        document.write("El objeto tiene alguna propiedad");
+      }
+    </script>
+  </body>
+</html>

@@ -7,7 +7,9 @@
   </head>
   <body>
     <script>
-      var palabra = prompt("Introduce una palabra");
+      do {
+        var palabra = prompt("Introduce una palabra");
+      } while (palabra == null || !isNaN(palabra));
       const array = palabra.split("").reverse();
       document.write(array.join(""));
     </script>
