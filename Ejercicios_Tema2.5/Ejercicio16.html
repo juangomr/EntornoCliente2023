@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let gato = {
+        nombre: "Juan",
+        duerme: true,
+        edad: 2,
+        enemigos: ["miau", "blas", "tu madre"],
+        comer: function () {
+          document.write("Ahora está comiendo");
+        },
+        comerAlgo: function (parametro) {
+          document.write(parametro + "<br>");
+        },
+        quienCome: function (nombre) {
+          document.write(this.nombre + " está comiendo ");
+        },
+      };
+
+      gato.comer() + gato.comerAlgo(" patatas");
+
+      gato.quienCome(gato.nombre) + gato.comerAlgo(" patatas");
+
+      for (const prop in gato) {
+        document.write(prop + ": " + gato[prop] + "<br>");
+      }
+    </script>
+  </body>
+</html>

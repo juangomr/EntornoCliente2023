@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="button"
+      id="boton"
+      name="boton"
+      value="Llamada a función"
+      onclick="crearObjeto()"
+    />
+
+    <script>
+      let crearObjeto = () => {
+        let taxi = {
+          tipoMotor: "audi",
+          numeroPasajeros: 5,
+          carga: 100,
+          velocidad: 250,
+          ruedas: 4,
+          saludar: function () {
+            alert(
+              "Hola soy un taxi de " +
+                this.ruedas +
+                " ruedas y " +
+                this.numeroPasajeros +
+                " pasajeros"
+            );
+          },
+        };
+        taxi.saludar();
+      };
+    </script>
+  </body>
+</html>
