@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      let cliente = {
-        nombre: "Juan",
-        email: "juangomr@gmail.com",
-        dirección: {
-          calle: "clavel",
-          num: 21,
-          ciudad: "sevilla",
-        },
-      };
 
-      document.write(cliente.direccion.ciudad);
-      cliente.direccion.ciudad = "huelva";
-      document.write(cliente.direccion.ciudad);
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let cliente = {
+      nombre: "Juan",
+      email: "juangomr@gmail.com",
+      direccion: {
+        calle: "clavel",
+        num: 21,
+        ciudad: "sevilla",
+      },
+    };
+
+    for (const propiedades in cliente) {
+      if (typeof cliente[propiedades] === "object") {
+        for (const propiedad in cliente[propiedades]) {
+          document.write(propiedad + ": " + cliente[propiedades][propiedad] + "<br>");
+        }
+      }
+      else {
+        document.write(propiedades + ": " + cliente[propiedades] + "<br>");
+      }
+    }
+    document.write("<br>");
+    cliente.direccion.ciudad = "huelva";
+    for (const key in cliente) {
+      if (typeof cliente[key] === "object") {
+        for (const k in cliente[key]) {
+          document.write(k + ": " + cliente[key][k] + "<br>");
+        }
+      }
+      else {
+        document.write(key + ": " + cliente[key] + "<br>");
+      }
+    }
+
+  </script>
+</body>
+
 </html>
