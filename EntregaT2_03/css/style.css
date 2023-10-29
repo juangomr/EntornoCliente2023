@@ -1,0 +1,22 @@
+.contenedor {
+    background-color: green;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+#caballo2 {
+    margin-top: 10px;
+}
+
+.botones {
+    text-align: center;
+}
+
+.boton {
+    text-align: center;
+    margin: 20px;
+}
