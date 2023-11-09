@@ -1,26 +1,36 @@
-let formulario, div, boton;
-
-let mostrar = (e) => {
-    e.preventDefault();
-    let cadena;
-    let opciones = document.getElementById("provincias").selectedIndex.value;
-    let texto = document.getElementById("nombre").value;
-    let area = document.getElementById("gustos").value;
-    div.innerHTML = texto;
-
-    for (let index = 0; index < formulario.elements.length; index++) {
-        if (formulario.elements[index].checked == true && formulario.elements[index].type != "button") {
-            cadena += formulario.elements[index].value;
-        }
-    }
-    div.innerHTML = cadena + opciones + area;
-}
+let nombre, apellidos, edad, boton, provincias, error;
 
 let inicio = () => {
-    formulario = document.getElementById("fname");
-    div = document.getElementById("formulario");
-    boton = document.getElementById("datos");
-    boton.addEventListener("click", mostrar);
-}
+  formulario = document.getElementById("formulario");
+  nombre = document.getElementById("nombre");
+  apellidos = document.getElementById("apellidos");
+  edad = document.getElementById("edad");
+  provincias = document.getElementById("provincias");
+  error = document.getElementById("resultado");
+  boton = document.getElementById("enviar");
+  boton.addEventListener("click", validarDatos);
+};
+let validarDatos = (e) => {
+  e.preventDefault();
+  let seleccionOk = false;
+  let inputOk = false;
+
+  if (
+    nombre.value != "" &&
+    apellidos.value != "" &&
+    edad.value >= 0 &&
+    edad.value <= 105
+  ) {
+    inputOk = true;
+  }
+
+  if (inputOk == false) {
+    e.preventDefault();
+    error.innerHTML = "Los datos introducidos son incorrectos";
+  } else {
+    error.innerHTML = "";
+    formulario.submit();
+  }
+};
 
 window.addEventListener("click", inicio);
