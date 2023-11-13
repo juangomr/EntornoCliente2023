@@ -18,14 +18,13 @@
     <input type="submit" value="Nuevo elemento a la lista">
 
     <script>
-
-
         let añadirElemento = () => {
             lista = document.getElementById("lista");
             elemento = document.createElement("li");
             elemento.textContent = "Nuevo elemento";
             lista.appendChild(elemento);
         }
+        
         let nodos = document.getElementsByTagName("input");
         var boton = nodos[0].setAttribute("id", "boton");
         boton = document.getElementById("boton");
