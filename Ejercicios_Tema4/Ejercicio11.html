@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        let estaciones = ["Enero", "Febrero", "Marzo", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-        let continentes = ["Europa", "África", "Asía", "América", "Oceanía"];
-    </script>
-</body>
+      let meses = [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre",
+      ];
+      let continentes = ["Europa", "África", "Asía", "América", "Oceanía"];
+      let contenedorLista = document.createElement("ul");
 
+      for (let index = 0; index < meses.length; index++) {
+        var li = document.createElement("li");
+        li.textContent = meses[index];
+        contenedorLista.appendChild(li);
+      }
+
+      document.body.appendChild(contenedorLista);
+
+      var contenedor = document.createElement("ul");
+
+      for (let index = 0; index < continentes.length; index++) {
+        contenedor.innerHTML += "<li>" + continentes[index] + "</li>";
+      }
+      document.body.appendChild(contenedor);
+    </script>
+  </body>
 </html>

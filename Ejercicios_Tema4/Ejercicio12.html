@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="contenido1">Lorem</p>
+    <a id="enlace1" href="#">Ocultar Contenido</a>
+
+    <p id="contenido2">Lorem</p>
+    <a id="enlace2" href="#">Ocultar Contenido</a>
+    <br />
+    <p id="contenido3">Lorem</p>
+    <a id="enlace3" href="#">Ocultar Contenido</a>
+
+    <script>
+      let a = document.getElementById("enlace1");
+      let p = document.getElementById("contenido1");
+      let mostrar = () => {
+        p.setAttribute("style", "display: block");
+        a.innerHTML = "Ocultar contenido";
+      };
+
+      let ocultar = () => {
+        p.setAttribute("style", "display: none");
+        a.innerHTML = "Mostrar contenido";
+      };
+
+      let mostrarContenidos = () => {
+        if (a.innerHTML == "Ocultar contenido") {
+          ocultar();
+        } else {
+          mostrar();
+        }
+      };
+
+      a.addEventListener("click", mostrarContenidos);
+    </script>
+  </body>
+</html>
