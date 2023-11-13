@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="lista">
+        <li>Lorem ipsum</li>
+        <li>Lorem ipsum</li>
+        <li>Lorem ipsum</li>
+        <li>Lorem ipsum</li>
+        <li>Lorem ipsum</li>
+    </ul>
+    <input type="submit" value="Nuevo elemento a la lista">
+
+    <script>
+
+
+        let añadirElemento = () => {
+            lista = document.getElementById("lista");
+            elemento = document.createElement("li");
+            elemento.textContent = "Nuevo elemento";
+            lista.appendChild(elemento);
+        }
+        let nodos = document.getElementsByTagName("input");
+        var boton = nodos[0].setAttribute("id", "boton");
+        boton = document.getElementById("boton");
+        boton.addEventListener("click", añadirElemento);
+    </script>
+</body>
+
+</html>

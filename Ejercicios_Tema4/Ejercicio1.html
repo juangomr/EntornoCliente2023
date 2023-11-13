@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="miDiv">
+    <p>P1</p>
+    <p>P2</p>
+  </div>
+  <script>
+    div = document.getElementById("miDiv");
+    var p = document.createElement("p");
+    var texto = document.createTextNode("Yo antes no existía");
+    p.appendChild(texto);
+    div.appendChild(p);
+    p.setAttribute("id", "ultParrafo");
+    var parrafoId = document.getElementById("ultParrafo");
+    parrafoId.style.color = "blue";
+
+  </script>
+</body>
+
+</html>

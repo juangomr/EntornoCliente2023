@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="miDiv">
+        <p id="p1">P1</p>
+        <p id="p2">P2</p>
+    </div>
+
+    <script>
+        div = document.getElementById("miDiv");
+        p = document.createElement("p");
+        texto = document.createTextNode("hola");
+        p1 = document.getElementById("p1");
+        p.appendChild(texto);
+        div.replaceChild(p, p1);
+
+
+
+    </script>
+</body>
+
+</html>
