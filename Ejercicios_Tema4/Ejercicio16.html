@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Hola</p>
+    <p>Hola2</p>
+    <input type="submit" value="Poner segundo p con fondo Rojo" />
+
+    <script>
+      document.body.children[2].setAttribute("id", "boton");
+      let boton = document.getElementById("boton");
+
+      let fondoRojo = () => {
+        document.body.children[1].style.backgroundColor = "red";
+      };
+
+      boton.addEventListener("click", fondoRojo);
+    </script>
+  </body>
+</html>
