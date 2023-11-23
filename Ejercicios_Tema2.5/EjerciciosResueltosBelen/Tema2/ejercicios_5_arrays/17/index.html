@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+     
+      crearObjeto=()=>{
+        const taxi = {
+       tipoMotor: "Diesel",
+       numeroPasajeros: 4,
+       carga:"1000",
+       velocidad:120,
+       ruedas: 4,
+       saludar: function(){
+        console.log(`Hola, el taxi tiene ${this.ruedas} ruedas y ${this.numeroPasajeros} pasajeros como máximo`);
+      alert(`Hola, el taxi tiene ${this.ruedas} ruedas y ${this.numeroPasajeros} pasajeros como máximo`);
+       },
+      }
+
+      taxi.saludar();
+
+      }
+    </script>
+
+    
+<div id="cabecera"><h2>Ejercicio del taxi</h2><h3>Ej 17</h3></div>
+
+<input type="button"  id ="pulsador" onclick="crearObjeto()" value=" Probar EJemplo Taxi " ></input>
+
+  </body>
+</html>

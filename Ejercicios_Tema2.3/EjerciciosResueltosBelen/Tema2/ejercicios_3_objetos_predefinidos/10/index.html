@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = 0;
+      let cad = "";
+      // numeroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
+      for (i = 0; i < 10; i++) {
+        ale = parseInt(Math.random() * 21);
+        cad += ale + " ";
+        num += ale;
+      }
+
+      document.write("la suma de los números " + cad + " es: " + num);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const FILAS = 5;
+      const COLUMNAS = 15;
+      const valor_0 = 0;
+      const valor_1 = 1;
+
+      var matriz = Array(FILAS)
+        .fill()
+        .map(() => Array(COLUMNAS));
+
+      creaMatriz = () => {
+        for (i = 0; i < matriz.length; i++) {
+          for (j = 0; j < matriz[i].length; j++) {
+            if (i == 0 || i == FILAS - 1) {
+              // primera fila o última
+              matriz[i][j] = valor_1;
+            } else if (j == 0 || j == COLUMNAS - 1) {
+              matriz[i][j] = valor_1;
+            } else {
+              matriz[i][j] = valor_0;
+            }
+          }
+        }
+      };
+
+      //function pintaTabla( matriz)
+      pintaTabla = () => {
+        for (i = 0; i < matriz.length; i++) {
+          for (j = 0; j < matriz[i].length; j++) {
+            document.write(matriz[i][j]);
+            document.write(" ");
+          }
+          document.write("<br>");
+        }
+      };
+
+      creaMatriz();
+      pintaTabla(matriz);
+    </script>
+  </body>
+</html>

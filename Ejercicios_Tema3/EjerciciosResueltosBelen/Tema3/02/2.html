@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>Propiedad VALUE de un objeto de tipo texto</title>
+    <script src="ejercicio2.js" defer></script>
+    <script type="text/javascript"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <form id="formulario">
+      <div class="container mt-5">
+        <h1>Propiedad VALUE de un objeto INPUT de tipo TEXT</h1>
+        <p>
+          <label for="nombre">Nombre y Apellidos: </label>
+          <input type="text" id="nombre" name="nombre" value="" size="30" />
+        </p>
+        Introduce tu Nombre y Apellidos y haz click fuera del campo.
+        <br /><br /><br /><br />
+
+        <h2 class="text-center mb-4">Reproducción de sonido</h2>
+        <div class="text-center mb-4">
+          <audio id="myAudio" src="pajaritos.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+          <button class="btn btn-primary" id="b1">Reproducir Sonido</button>
+          <button class="btn btn-primary" id="b2">Detener Sonido</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

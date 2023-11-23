@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const gato = {
+        nombre: "Valiente",
+        duerme: true,
+        edad: 10,
+        enemigos: ["agua", "perros"],
+      };
+
+      console.log(gato["enemigos"][0]);
+      console.log(gato.enemigos[0]);
+      gato.color = "Azul";
+      gato.edad = 11;
+      delete gato.duerme;
+    </script>
+  </body>
+</html>

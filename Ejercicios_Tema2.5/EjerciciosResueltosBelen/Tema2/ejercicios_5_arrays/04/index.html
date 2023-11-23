@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <body>
+      <form name="f">
+        <input type="button" value="Aprobado general" onclick="aprobado()" />
+        <input type="button" value="Modificar nota" onclick="modificar()" />
+        <input
+          type="button"
+          name="b3"
+          value="mostrar notas"
+          onclick="mostrar()"
+        />
+        <br /><br />
+        <textarea name="resultado" cols="50" rows="20"></textarea>
+      </form>
+    </body>
+    <script>
+      //Variables Globales
+      var alum = ["Ana", "Berta", "Luis", "David", "Elena", "Fran"];
+      var notas = [];
+
+      //let notas = alum.map(e=>5)
+      aprobado = () => {
+        notas = alum.map((e) => 5);
+      };
+
+      /*function aprobado()
+     {
+        for (let i = 0; i < 5; i++){       
+            notas.push(5);    
+        }    
+    }*/
+      cad = "";
+      mostrar = () => {
+        cad = "";
+        alum.forEach((e, i) => {
+          cad += i + " - " + e + ":" + notas[i] + "\n";
+        });
+
+        document.f.resultado.value = cad;
+      };
+      /*  
+    function mostrar()    
+      {
+          //document.write(`<h2>Notas actuales: </h2>`);
+          var cad="";
+          for (let i = 0; i < 5; i++){
+              
+              cad += i + " - " + alum[i] + ":" + notas[i] + "<br>";
+           }    
+           
+           document.write(cad);
+      }   */
+
+      modificar = () => {
+        numAlumno = window.prompt("Introduzca alumno(0-5)", "0");
+        nuevaNota = window.prompt("Introduzca su nueva nota(0-10)", "0");
+
+        nuevaNota = parseInt(nuevaNota);
+        notas[numAlumno] = nuevaNota;
+      };
+      /*
+      function modificar(){
+          
+        numAlumno = window.prompt('Introduzca alumno(0-4)', '0');  
+        nuevaNota = window.prompt('Introduzca su nueva nota(0-10)', '0'); 
+          
+          nuevaNota = parseInt(nuevaNota);       
+          notas[numAlumno] = nuevaNota;    
+    }*/
+    </script>
+  </head>
+</html>

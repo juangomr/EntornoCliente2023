@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let factura = {
+        numero: 201,
+        cliente: "Transportes CEU",
+        divisa: "euros",
+        subtotal: 350.25,
+        IVA: 75.55,
+        total: function () {
+          return this.subtotal + this.IVA;
+        },
+      };
+
+      let numeroFactura = factura.numero;
+      let totalFactura = factura.total();
+
+      console.log(
+        "La factura " +
+          numeroFactura +
+          " tiene un importe de " +
+          totalFactura +
+          " " +
+          factura.divisa
+      );
+      // La factura 201 tiene un importe de 425.8 eur
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let nombre = prompt("Introduzca su nombre");
+
+      // primera forma:
+      let nombreSinEspacios = nombre.replaceAll(" ", "");
+      document.write("La longitud es: " + nombreSinEspacios.length + "<br/>");
+
+      //segunda forma: con split y join
+      var palabras = nombre.split(" ");
+      document.write(
+        palabras[0].length + palabras[1].length + palabras[2].length
+      );
+
+      document.write("<br/>");
+      document.write("Mayúsculas: " + nombre.toLocaleUpperCase() + "<br/>");
+      document.write("Minúsculas: " + nombre.toLocaleLowerCase() + "<br/>");
+
+      palabras = nombre.split(" ");
+
+      //la inicial del nombre, el primer apellido y la inicial del segundo apellido
+      document.write(
+        palabras[0].substr(0, 1) +
+          palabras[1] +
+          palabras[2].substr(0, 1) +
+          "<br/>"
+      );
+
+      //las tres primeras letras del nombre y  de los dos apellidos
+      document.write(
+        palabras[0].substr(0, 3) +
+          palabras[1].substr(0, 3) +
+          palabras[2].substr(0, 3) +
+          "<br/>"
+      );
+    </script>
+  </body>
+</html>

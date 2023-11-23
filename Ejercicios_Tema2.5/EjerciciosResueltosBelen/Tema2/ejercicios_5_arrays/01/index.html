@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [2, 3, 4, 5, 0];
+
+      let sum = 0;
+      arr.forEach(function (e) {
+        sum += e;
+      });
+      console.log(`La suma de los numeros de ${arr} es ${sum}`);
+
+      // con for:
+
+      sum = 0;
+      for (i = 0; i < arr.length; i++) sum += arr[i];
+
+      console.log(`La suma con for de los numeros de ${arr} es ${sum}`);
+
+      // con arrow functions
+      sum = 0;
+      arr.forEach((e) => {
+        sum += e;
+      });
+      console.log(`La suma de los numeros de ${arr} es ${sum}`);
+
+      //La media de los números
+      sum = 0;
+      arr.forEach(function (e) {
+        sum += e;
+      });
+      console.log(`La media de los numeros de ${arr} es ${sum / arr.length}`);
+
+      // con arrow functions
+      sum = 0;
+      arr.forEach((e) => {
+        sum += e;
+      });
+      console.log(`La media de los numeros de ${arr} es ${sum / arr.length}`);
+
+      //El triple de cada número
+      const newArr = arr.map((el) => el * 3);
+      console.log(`Array original ${arr} \nArray con el triple ${newArr}`);
+
+      console.log("*******************************");
+      console.log("Array original: " + arr);
+      //mismo array:
+      arr.forEach((e, index) => {
+        arr[index] = e * 3;
+      });
+
+      console.log("Array modificado: " + arr);
+    </script>
+  </body>
+</html>

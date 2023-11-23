@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      do {
+        dia = prompt("Indique el dia de su cumpleaños");
+      } while (isNaN(dia) || dia <= 0 || dia > 31);
+
+      do {
+        mes = prompt("Indique el mes de su cumpleaños");
+      } while (isNaN(mes) || mes <= 0 || mes > 12);
+
+      var anyo = new Date().getFullYear();
+
+      for (i = anyo; i < 2100; i++) {
+        var fecha = new Date(i, mes - 1, dia); // ojo que los meses empiezan en 0
+
+        if (fecha.getDay() == 0) {
+          //es domingo
+          document.write(dia + "/" + mes + "/" + i);
+          document.write("<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

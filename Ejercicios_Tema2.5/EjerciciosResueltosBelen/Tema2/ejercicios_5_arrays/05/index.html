@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let texto = window.prompt("Introduzca palabra");
+
+      let arr = texto.toLowerCase().split(""); // pasamos a array
+
+      let vocales = ["a", "e", "i", "o", "u"];
+
+      let vocal = 0;
+
+      esVocal = (c) => {
+        if (vocales.includes(c)) return true;
+        else return false;
+      };
+
+      //recorremos el array con la palabra
+      arr.forEach((e) => {
+        if (esVocal(e.toLowerCase())) vocal++;
+
+        return vocal;
+      });
+
+      console.log(`${texto} tiene ${vocal} vocales`);
+      document.write(`La palabra ${texto} tiene ${vocal} vocales`);
+    </script>
+  </head>
+  <body></body>
+</html>

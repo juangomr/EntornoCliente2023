@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Documento sin t&iacute;tulo</title>
+    <script src="ejercicio4.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <h1>Trabajando con un objeto Select</h1>
+
+    <form id="formulario" action="pagina.php">
+      <p>
+        <label for="provincias">Seleccione provincia: </label>
+        <select name="provincias" id="provincias">
+          <option value="C">La Coruña</option>
+          <option value="LU">Lugo</option>
+          <option value="OU">Ourense</option>
+          <option value="PO">Pontevedra</option>
+        </select>
+      </p>
+
+      <input
+        type="button"
+        name="boton"
+        id="b1"
+        value="Consultar información de la opción"
+      />
+
+      <p>
+        <label for="provinciasM">Seleccione provincia: </label>
+        <select name="provinciasM" id="provinciasM" multiple>
+          <option value="C">La Coruña</option>
+          <option value="LU">Lugo</option>
+          <option value="OU">Ourense</option>
+          <option value="PO">Pontevedra</option>
+        </select>
+      </p>
+
+      Selecciona opciones y pulsa el botón.
+      <input
+        type="button"
+        name="boton"
+        id="b2"
+        value="Consultar información de la opción"
+      />
+    </form>
+  </body>
+</html>

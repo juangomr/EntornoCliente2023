@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let palabra = prompt("Dame una palabra:");
+
+      if (palabra != null) {
+        if (!palabra)
+          // si es vacia
+          document.write("Cadena vacía");
+        else {
+          array = palabra.split("");
+          arrayInvertido = array.reverse();
+          palabraInvertida = arrayInvertido.join(""); // lo paso a cadena
+          //document.write(cadena.split("").reverse().join(""))
+
+          document.write(
+            `La palabra ${palabra} invertida es ${palabraInvertida}`
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

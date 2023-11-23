@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //en estas líneas creamos las fechas
+      miFechaActual = new Date();
+
+      alert(miFechaActual.toString());
+      miFechaPasada = new Date(1998, 4, 23); // ojo con el mes, no es abril, es mayo
+
+      //en estas líneas imprimimos las fechas.
+
+      document.write(miFechaActual);
+      document.write("<br>");
+      document.write(miFechaPasada);
+
+      //extraemos el año de las dos fechas
+      aActual = miFechaActual.getFullYear();
+      aPasado = miFechaPasada.getFullYear();
+
+      //Escribimos en año en la página
+      document.write("<br>El año actual es: " + aActual);
+      document.write("<br>El año de mi cumple es: " + aPasado);
+      document.write("<br>");
+      //cambiamos el año en la fecha actual
+      miFechaActual.setFullYear(aActual - 1);
+      document.write(miFechaActual.toLocaleDateString());
+      document.write("<br>");
+      document.write(Math.fround(3.123456789));
+
+      //extraemos el día mes y año
+      dia = miFechaActual.getDate();
+      mes = parseInt(miFechaActual.getMonth()) + 1;
+      ano = miFechaActual.getFullYear();
+
+      //escribimos la fecha en un formato legible
+      document.write("<br>");
+      window.document.write(dia + "/" + mes + "/" + ano);
+    </script>
+  </body>
+</html>

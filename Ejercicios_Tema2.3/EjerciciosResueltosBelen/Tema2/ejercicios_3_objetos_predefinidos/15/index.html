@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let pregunta = confirm("¿Quieres abrir una ventana nueva?");
+      if (pregunta) {
+        nueva_ventana = window.open(
+          "",
+          "prueba",
+          "width=200px,height=100px,top=500px,left=500px,resizable=yes,scrollbars=yes"
+        );
+      }
+      nueva_ventana.focus();
+      nueva_ventana.document.write("<h1>Entorno cliente</h1>");
+    </script>
+  </head>
+  <body></body>
+</html>

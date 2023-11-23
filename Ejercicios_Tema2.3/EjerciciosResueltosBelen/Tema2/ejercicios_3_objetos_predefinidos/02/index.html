@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //en estas líneas creamos las fechas
+      let miFechaActual = new Date(); // fecha actual
+      let miFechaFin = new Date(2024, 5, 30); // ojo que los meses empiezan por 0
+
+      let milisegundosDia = 24 * 60 * 60 * 1000;
+
+      numDias = miFechaFin - miFechaActual;
+
+      document.write(
+        `<h1>Quedan ${Math.floor(
+          Math.abs(numDias) / milisegundosDia
+        )} días hasta el 30 de junio de 2024 `
+      );
+    </script>
+  </body>
+</html>

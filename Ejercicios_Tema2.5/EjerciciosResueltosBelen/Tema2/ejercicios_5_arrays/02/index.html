@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      cont = 1;
+      palabras = new Array();
+      do {
+        palabra = prompt(`Palabra ${cont}:`);
+
+        if (palabra == null) {
+          palabras.push("");
+        } else {
+          palabras.push(palabra);
+        }
+        cont++;
+      } while (cont <= 3);
+
+      // con arrow functions
+
+      let filtrado = palabras.filter((e) => e.startsWith("C"));
+
+      if (filtrado.length == 0) {
+        mensaje = "No hay ninguna palabra que comience por C";
+        console.log(mensaje);
+        document.write(mensaje);
+      } else {
+        console.log(`${palabras} - ${filtrado}`);
+        document.write(`${palabras} - ${filtrado}`);
+      }
+    </script>
+  </body>
+</html>

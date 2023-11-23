@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var cliente = {
+        nombre: "Bruce Wayne",
+        email: "bruce@wayne.com",
+        direccion: {
+          calle: "Mountain Drive",
+          num: 1007,
+          ciudad: "Gotham",
+        },
+      };
+
+      cliente.direccion.ciudad = "Sevilla";
+
+      //recorremos objetos
+
+      for (let key in cliente) {
+        if (typeof cliente[key] == "object") {
+          for (let keyObject in cliente[key]) {
+            console.log(`${keyObject} : ${cliente[key][keyObject]} `);
+          }
+        } else {
+          console.log(`${key} : ${cliente[key]} `);
+        }
+      }
+    </script>
+  </body>
+</html>

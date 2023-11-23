@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const gato2 = {
+        nombre: "Valiente",
+        duerme: true,
+        edad: 10,
+        enemigos: ["agua", "perros"],
+        comer: function () {
+          console.log("Ahora está comiendo");
+        },
+        comerAlgo(comida) {
+          console.log("Ahora está comiendo: " + comida);
+        },
+        quienCome(comida) {
+          console.log(`${this.nombre} está comiendo ${comida}`);
+        },
+      };
+
+      gato2.comer();
+      gato2.comerAlgo("pez");
+      gato2.quienCome("pez");
+
+      for (const propiedad in gato2) {
+        console.log(gato2[propiedad]);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var menu = "Introduzca un opción \n";
+      menu += "1 Potencia \n ";
+      menu += "2 Raiz \n ";
+      menu += "3 Redondeo \n ";
+
+      do {
+        opcion = prompt(menu);
+      } while (isNaN(opcion) || opcion <= 0 || opcion > 3);
+
+      if (opcion == 1) {
+        do {
+          var base = prompt("Introduzca una base");
+        } while (isNaN(base));
+        do {
+          var exp = prompt("Introduzca un exponente");
+        } while (isNaN(exp));
+
+        document.write(
+          "La potencia de " +
+            base +
+            " elevada a " +
+            exp +
+            " es: " +
+            Math.pow(base, exp)
+        );
+      } else if (opcion == 2) {
+        do {
+          var raiz = prompt("Introduzca un número no negativo para la raiz");
+        } while (isNaN(raiz) || raiz < 0);
+
+        document.write(
+          "La raiz cuadrada de " + raiz + " es: " + Math.sqrt(raiz)
+        );
+      } else if (opcion == 3) {
+        var num = prompt("Introduzca un número decimal");
+        document.write(
+          "Número a la baja de " + num + " es: " + Math.floor(num) + "<br>"
+        );
+        document.write("Número al alza de " + num + " es: " + Math.ceil(num));
+      }
+    </script>
+  </body>
+</html>

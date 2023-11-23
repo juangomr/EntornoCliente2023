@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+    const estaciones = ["Primavera", "Otoño", "Verano", "Invierno"];
+
+    $ul = document.createElement("ul");
+    document.write("<h3>Estaciones del Año</h3>");
+    document.body.appendChild($ul);
+
+    estaciones.forEach((el) => {
+      const $li = document.createElement("li");
+
+      const $n = document.createTextNode(el);
+      $li.appendChild($n);
+      //$li.innerHTML=el;
+
+      $ul.appendChild($li);
+    });
+
+    const continentes = ["Africa", "America", "Asia", "Europa", "Oceania"];
+    $ul2 = document.createElement("ul");
+
+    document.write("<h3>Continentes del mundo</h3>");
+    document.body.appendChild($ul2);
+    $ul2.innerHTML = "";
+    continentes.forEach((e) => {
+      $ul2.innerHTML += `<li>${e}</li>`;
+    });
+
+    // con fragmentos
+    const meses = [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre",
+    ];
+
+    $ul3 = document.createElement("ul");
+    $fragment = document.createDocumentFragment();
+
+    meses.forEach((el) => {
+      const $li = document.createElement("li");
+      $li.textContent = el;
+      $fragment.appendChild($li);
+    });
+    document.write("<h3>Meses del año</h3>");
+    $ul3.appendChild($fragment);
+    document.body.appendChild($ul3);
+  </script>
+</html>

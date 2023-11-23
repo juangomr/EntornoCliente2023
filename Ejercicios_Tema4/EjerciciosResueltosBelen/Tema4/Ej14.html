@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <!-- li*10>lorem  --> 
+  <!-- ol>lorem*10  --> 
+<!-- <ol>
+      li#lista$*10>lorem
+     </ol>  
+-->
+
+
+<ol>
+  <li id="lista1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus inventore reprehenderit maxime nemo? Consequuntur molestias culpa est voluptatum fugit error eligendi soluta a, cumque reprehenderit dolores harum, beatae ducimus porro.</li>
+  <li id="lista2">Enim sapiente temporibus id neque dolorum, consequuntur asperiores dignissimos deleniti recusandae cumque vel pariatur ut adipisci placeat, eius dolores optio delectus quibusdam quisquam, tenetur vero repellat exercitationem aperiam! Consectetur, officia?</li>
+  <li id="lista3">Quae qui facere pariatur doloribus possimus quasi quos laudantium repellendus consequatur. Magni consequatur recusandae doloribus, ducimus libero, explicabo, omnis animi neque in soluta accusamus! Nostrum laudantium soluta error! Et, iure!</li>
+  <li id="lista4">Impedit, odio sapiente ea praesentium nesciunt laboriosam et rem amet quasi doloribus libero inventore earum nihil asperiores voluptatem animi esse error tempora corrupti? Facere tenetur, atque odit architecto vitae eius?</li>
+  <li id="lista5">Quisquam suscipit fugit voluptas eos facilis molestias tempore magni earum quam odio nemo, non, quia possimus, dolorum voluptate! Debitis libero quo modi id ipsa porro obcaecati, explicabo iusto facilis nihil.</li>
+  <li id="lista6">Maxime asperiores necessitatibus, optio obcaecati minus enim iusto ipsam provident deleniti excepturi, ducimus hic corporis voluptates voluptas odit velit libero. Quis reprehenderit dolorum similique nisi ratione rerum ipsa consequuntur eos!</li>
+  <li id="lista7">Illum, amet! Consequuntur minima porro adipisci, harum doloremque odio libero odit dignissimos accusamus consectetur a tempore. Veniam cupiditate, rerum incidunt ad unde tenetur molestiae magni quis deleniti earum ullam odio.</li>
+  <li id="lista8">Beatae ut consectetur mollitia at soluta aspernatur quam animi odio numquam ex labore quibusdam odit, dignissimos quod perspiciatis minima qui distinctio accusamus eligendi ea sapiente? Blanditiis aliquam dolores iste tempore!</li>
+  <li id="lista9">Accusantium autem qui laudantium sit explicabo eaque illum ut praesentium quia eius maxime est nulla nemo incidunt et voluptates, sint fugiat adipisci voluptatum odit repellat. Sunt fugit cupiditate distinctio soluta!</li>
+  <li id="lista10">Quaerat nostrum, impedit temporibus perferendis libero fugiat sed numquam consequatur ullam. Doloribus consequatur corrupti consectetur neque voluptatibus! Commodi voluptatem optio cum vitae aperiam modi veniam molestiae, magni pariatur tempora ipsum!</li>
+</ol> 
+   
+</body>
+
+<script>
+    let texto=prompt("Escribe el texto que desees");
+    let posicion;
+    if(texto!=null){
+      do{
+        posicion= prompt("Escriba la posición de ese texto (número del 1 al 10)");   
+        if(posicion!=null){
+          posicion=parseInt(Number(posicion));
+          if(isNaN(posicion) || posicion<1  ||posicion>10){
+                 alert("Número no válido")
+          }
+        }
+      }while(posicion!=null && 
+                    (isNaN(posicion) ||posicion<1 || posicion>10));
+
+
+      
+      // creamos el nuevo elemento
+      let nuevoElemento=document.createElement("li");
+      let nuevoTexto = document.createTextNode(texto);      
+      //nuevoElemento.innerHTML=`<strong>${texto}</strong`;
+      nuevoElemento.appendChild(nuevoTexto);
+
+
+      //colocación del texto en su posición. FORMA 1
+      
+      let lista=document.getElementsByTagName("ol")[0];
+      if(posicion==10){
+         //si el número es el 10 se añade al final
+         lista.appendChild(nuevoElemento);
+       }            
+       else{
+         //si no se añade delante de la posición indicada
+         //Se resta uno porque se numera desde el 0
+         let liSiguiente=lista.children[posicion-1];
+         lista.insertBefore(nuevoElemento,liSiguiente)
+       }            
+       
+       // colocación del texto en su posición. FORMA 2 CON ID.       
+       /*let elem= document.getElementById("lista"+posicion);
+       if(posicion==10){
+        elem.parentNode.appendChild(nuevoElemento);
+       }
+       else{
+       elem.parentNode.insertBefore(nuevoElemento,elem);
+       }*/
+
+    }
+  </script>
+  </body>
+  
+</html>

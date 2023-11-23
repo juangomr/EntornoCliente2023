@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      multiplyNumeric = (obj) => {
+        for (let key in obj) {
+          if (typeof obj[key] == "number") {
+            obj[key] *= 2;
+          }
+        }
+      };
+
+      let menu = {
+        width: 200,
+        height: 300,
+        title: "Mi menú",
+      };
+
+      multiplyNumeric(menu);
+      // Después de la llamada
+      /*menu = { 
+	width: 400,
+	height: 600,
+	title: "Mi menú" 
+}; */
+      console.log(menu);
+    </script>
+  </body>
+</html>

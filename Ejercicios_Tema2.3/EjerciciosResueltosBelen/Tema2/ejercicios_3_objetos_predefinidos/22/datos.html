@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+ @author Raúl Caro Pastorino
+ @copyright Copyright © 2017 Raúl Caro Pastorino
+ @license https://wwww.gnu.org/licenses/gpl.txt
+-->
+
+<!--
+↓ INSTRUCCIONES DEL EJERCICIO ↓
+Selector de colores para mostrar en la ventana principal como fondo
+-->
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Datos personales</title>
+        <meta name="author" content="Raúl Caro Pastorino" />
+        <script>
+            function mostrarDatos() {
+                
+                cad="";
+
+                nombre = document.getElementById("nombre").value;
+                ap1 = document.getElementById("ap1").value;
+                ap2 = document.getElementById("ap2").value;
+                fecha = new Date(document.getElementById("fecha").value);
+
+               
+                cad += 'Nombre: ' + nombre + "<br>";
+                cad += 'Primer Apellido: ' + ap1 + "<br>";
+                cad += 'Segundo Apellido: ' + ap2 + "<br>";
+                
+                cad += 'fecha: ' + fecha.toLocaleDateString() + "<br>";
+
+                var fechaActual = new Date();
+
+                var anyo = parseInt(fecha.getFullYear());
+                var cont=0;
+                cad += 'Años bisiestos desde ' + fecha.toLocaleDateString() + "<br>";
+                              
+                for(i=anyo; i<fechaActual.getFullYear(); i++)
+                {  
+                    
+                    if(( i%100 !=0 && i%4 ==0) || (i%400)==0)            
+                    {
+                        cad += i + "<br>";
+                        cont++;
+                    }
+                }
+                
+                if(cont==0)
+                    cad += 'No hay años bisiestos desde ' + fecha.toLocaleDateString() ;
+
+                  
+                window.opener.document.getElementById('datos').innerHTML= cad;
+                window.close();
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 id="titulo1">Escriba sus datos</h1>
+        <div>
+            <form>
+                Nombre: <input type="text" id="nombre" name="nombre" />
+                Apellido1: <input type="text" id="ap1" name="ap1" />
+                Apellido2: <input type="text" id="ap2" name="ap2" />
+                Fecha: <input type="date"  id="fecha" name="fecha" />
+                
+                <input type="button" name="calcular" value="Mostrar"
+                       onclick="mostrarDatos();" />
+            </form>
+        </div>
+    </body>
+</html>

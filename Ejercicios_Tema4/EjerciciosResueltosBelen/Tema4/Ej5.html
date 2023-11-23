@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// Crear nodo de tipo Element
+var parrafo = document.createElement("p");
+
+// Crear nodo de tipo Text
+var contenido = document.createTextNode("Hola Mundo!");
+
+// Añadir el nodo Text como hijo del nodo Element
+parrafo.appendChild(contenido);
+
+// Añadir el nodo Element como hijo de la pagina
+document.body.appendChild(parrafo);
+</script>

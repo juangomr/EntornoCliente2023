@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Ordenar tres números de forma ascendente sin usar condicionales ni ciclos.
+
+      do {
+        a = parseInt(prompt("Número 1:"));
+      } while (isNaN(a));
+
+      do {
+        b = parseInt(prompt("Número 2:"));
+      } while (isNaN(b));
+
+      do {
+        c = parseInt(prompt("Número 3:"));
+      } while (isNaN(c));
+
+      let min = Math.min(a, b, c);
+      let max = Math.max(a, b, c);
+
+      let medio = a + b + c - min - max;
+
+      document.write(`Orden ascendente:  ${min} ${medio}  ${max}  `);
+    </script>
+  </body>
+</html>
