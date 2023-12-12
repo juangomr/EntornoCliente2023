@@ -37,7 +37,8 @@ let inicio = () => {
   boton = document.getElementById("boton").addEventListener("click", () => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((response) => response.json())
-      .then((json) => insertar(json));
+      .then((json) => insertar(json))
+      .catch("Error");
   });
 };
 
